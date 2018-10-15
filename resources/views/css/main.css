@@ -1,0 +1,82 @@
+html,body{
+	font-family: "微软雅黑";
+	color: rgb(246,246,246);
+	background-color: rgb(245,245,249);
+}
+a:link {
+	text-decoration: none;
+}
+nav {
+	background-color: rgb(0,170,238);
+}
+nav .container {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+nav > .container > span:first-child {
+	float: left;
+}
+nav > .container > span:nth-child(2) {
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+nav > .container > span:last-child {
+	cursor: pointer;
+	float: right;
+}
+header {
+	margin-top: 40px;
+	padding-top: 18px;
+	background-color: rgb(0,170,238);
+}
+header > .container > h2 {
+	color: rgb(228,228,228);
+	margin-bottom: 28px;
+}
+header > .container > div {
+	margin-bottom: 28px;
+}
+header > div:last-child {
+	font-size: 14px;
+	background-color: rgba(26,129,209,0.6);
+	padding: 8px 0;
+	letter-spacing: 1px;
+}
+header > .container > div > span:first-child {
+	font-size: 52px;
+}
+header > .container > div > span:last-child {
+	font-size: 14px;
+	color: rgb(228,228,228);
+}
+section > ul > li {
+	font-size: 17px;
+	background-color: white;
+	color: black;
+	padding: 12px 0;
+	margin-bottom: 1px;
+	cursor: pointer;
+}
+section > ul > li > a{
+	padding: 12px 0;
+}
+section > ul > li:last-child {
+	text-align: center;
+	color: rgb(252,255,242);
+	padding: 0 0;
+	margin-top: 20px;
+}
+li span {
+	margin-left: 8px;
+}
+ul > li > .container > svg:last-child {
+	float: right;
+}
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}

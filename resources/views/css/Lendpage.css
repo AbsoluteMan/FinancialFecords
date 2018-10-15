@@ -1,0 +1,111 @@
+html,body{
+	font-family: "微软雅黑";
+	color: rgb(245,245,249);
+	background-color: white;
+}
+.input-group{
+	width: 100%;
+}
+.navbar-fixed-top {
+	background-color: rgb(0,170,238);
+}
+nav > .container {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+nav > .container > svg {
+	float: left;
+}
+nav > .container > span:last-of-type {
+	float: right;
+}
+section:first-of-type{
+	margin-top: 66px;
+}
+section {
+	color: rgb(135,135,135);
+}
+section > .container:first-child {
+	margin-top: 20px;
+}
+section > .container > span:first-child
+{
+	float: left;
+}
+section > .container > span:last-child{
+	font-size: 28px;
+}
+section > .container > span:last-child,
+section > .container > ul > li > span:last-child
+{
+	float: right;
+	color: black;
+}
+section > .container:nth-of-type(2) > ul > li:not(:last-child) {
+	margin-bottom: 6px;
+}
+section:nth-of-type(2) > .container {
+	margin-top: 10px;
+}
+section:nth-of-type(2) > .container > div > h1{
+	margin-bottom: 18px;
+}
+section:nth-of-type(2) > .container > div{
+	padding: 10px;
+	background-color: white;
+	color: rgb(135,135,135);
+	font-size: 14px;
+}
+section:nth-of-type(2) > .container > div > form > div{
+	border-bottom: 1px solid rgb(135,135,135);
+	margin-bottom: 20px;
+}
+section:nth-of-type(3) {
+	font-size: 14px;
+	color: rgb(135,135,135);
+}
+section:nth-of-type(3) > .container > div {
+	background-color: rgb(245,245,249);
+	padding: 10px;
+	margin-bottom: 10px;
+}
+section:nth-of-type(3) > .container > div > p {
+	margin-bottom: 4px;
+}
+.input-group-addon {
+	padding: 0;
+}
+.divspan {
+	padding-bottom: 10px;
+	padding-right: 2px;
+	color: #000000;
+	background-color: rgba(0,0,0,0);
+	border: none;
+	font-size: 28px;
+}
+.divinput {
+	font-family: "微软雅黑";
+	color: #000000;
+	width: 100%;
+	border: none;
+	font-size: 48px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}

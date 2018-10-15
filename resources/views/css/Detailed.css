@@ -1,0 +1,51 @@
+html,body{
+	font-family: "微软雅黑";
+	color: rgb(245,245,249);
+	background-color: white;
+}
+.navbar-fixed-top {
+	background-color: rgb(0,170,238);
+}
+nav > .container {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+nav > .container > svg {
+	float: left;
+}
+nav > .container > span:last-of-type {
+	float: right;
+}
+section:first-of-type {
+	margin-top: 36px;
+}
+section {
+	border-bottom: 1px solid rgb(245,245,245);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+section > .container > p {
+	margin-bottom: 6px;
+	color: black;
+}
+section > .container > p > span:last-child{
+	float: right;
+}
+.color1{
+	color: rgb(32,32,32);
+}
+.color2{
+	color: rgb(66,66,66);
+	font-size: 14px;
+}
+.color3{
+	color: rgb(160,160,160);
+	font-size: 14px;
+}
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
