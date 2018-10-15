@@ -29,7 +29,7 @@
 					<div class="clear"></div>
 				</div>
 				<div>
-					<input type="submit" class="btn btn-primary btn-lg btn-block" value="登录"/>
+					<input type="submit" onclick="sub()" class="btn btn-primary btn-lg btn-block" value="登录"/>
 				</div>
 			</form>
 		</div>
@@ -40,11 +40,28 @@
 	<script src="{{asset('resources/views/js/honeySwitch.js')}}" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function() {
+            var storage = window.localStorage;
+            if(storage["bj"] == "yes"){
+                honeySwitch.showOn("#sava-user");
+                $("input[name = 'user_name']").val(storage["username"]);
+                $("input[name = 'user_pass']").val(storage["userpass"]);
+			}else {
+                honeySwitch.showOff("#sava-user");
+			}
     		switchEvent("#sava-user", function() {
-        		alert('1')
+				storage["username"] = $("input[name = 'user_name']").val();
+                storage["userpass"] = $("input[name = 'user_pass']").val();
+				storage["bj"] =  "yes";
     		}, function() {
-        		alert('2');
+                localStorage.clear();
     		});
 		});
+		function sub() {
+            var storage = window.localStorage;
+            if(storage["bj"] == "yes"){
+                storage["username"] = $("input[name = 'user_name']").val();
+                storage["userpass"] = $("input[name = 'user_pass']").val();
+			}
+        }
 	</script>
 </html>
