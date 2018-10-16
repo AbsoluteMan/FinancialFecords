@@ -97,7 +97,7 @@
 			if (money){
 			    if(money>0){
 			        if (time){
-			            if(money<=($("#money_returnd").html())){
+                        if(money<=parseFloat($("#money_returnd").html())){
                             var timestamp = Date.parse(new Date(time)) / 1000;
                             $.post('{{url('/Lend/ajax')}}',{'_token':"{{csrf_token()}}",'lender_id':{{$lender_data->lender_id}},'his_returnd':money,'his_time':timestamp,'his_remarks':remarks,'his_pid':{{$lender_data->lender_id}}},function (data,status) {
                                 if (status == 'success') {
