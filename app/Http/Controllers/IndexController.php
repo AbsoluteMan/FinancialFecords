@@ -29,32 +29,21 @@ class IndexController extends Controller
     {
         if($input = Input::all()){
             $user = User::first();
-            $rules = [
-              'user_money'=>'numeric',
-            ];
-            $message = [
-              'user_money.numeric'=>'请输入合法金额!',
-            ];
-            $validator = Validator::make($input,$rules,$message);
-            if($validator->passes()){
-                $user -> user_money = $input['user_money'];
-                $re = $user -> update();
-                $list = Lists::all();
-                foreach($list as $dv){
-                    $dv -> delete();
-                }
-                $lender_his = Lendlist::all();
-                foreach($lender_his as $dv){
-                    $dv -> delete();
-                }
-                $lendform = Lendform::all();
-                foreach($lendform as $dv){
-                    $dv -> delete();
-                }
-                return redirect('/index');
-            }else{
-                return back()->withErrors($validator);
+            $user -> user_money = $input['user_money'];
+            $re = $user -> update();
+            $list = Lists::all();
+            foreach($list as $dv){
+                $dv -> delete();
             }
+            $lender_his = Lendlist::all();
+            foreach($lender_his as $dv){
+                $dv -> delete();
+            }
+            $lendform = Lendform::all();
+            foreach($lendform as $dv){
+                $dv -> delete();
+            }
+            return redirect('/index');
         }else{
             $user_money = User::first()->user_money;
             return view('setting',compact('user_money'));

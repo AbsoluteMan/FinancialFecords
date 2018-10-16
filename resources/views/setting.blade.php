@@ -43,13 +43,17 @@
 		$("[type = 'button']").click(function () {
             layer.confirm('初始化金额将会清空所有数据！是否继续？', {
                 title: ['警告'],
-                btn: ['初始化','关闭'], //按钮
+                btn: ['初始化','关闭'],
 				skin: "demo-class"
             }, function(){
-                layer.msg('<span style="color: #000;">初始化成功！</span>', {icon: 1});
-                setTimeout(function () {
-                    $("#form").submit();
-                },800)
+                if($("[name = 'user_money']").val() == ''){
+                    layer.msg('<span style="color: #000">请输入合法金额！</span>',{icon:5});
+				}else{
+                    layer.msg('<span style="color: #000;">初始化成功！</span>', {icon: 1});
+                    setTimeout(function () {
+                        $("#form").submit();
+                    },800);
+				}
             });
         });
 	</script>
