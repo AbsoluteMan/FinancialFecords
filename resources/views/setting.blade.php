@@ -46,14 +46,19 @@
                 btn: ['初始化','关闭'],
 				skin: "demo-class"
             }, function(){
-                if($("[name = 'user_money']").val() == ''){
+                var a=/^[0-9]*(\.[0-9]{1,2})?$/;
+                if(!a.test($("[name = 'user_money']").val())) {
                     layer.msg('<span style="color: #000">请输入合法金额！</span>',{icon:5});
-				}else{
-                    layer.msg('<span style="color: #000;">初始化成功！</span>', {icon: 1});
-                    setTimeout(function () {
-                        $("#form").submit();
-                    },800);
-				}
+                } else {
+                    if($("[name = 'user_money']").val() == ''){
+                        layer.msg('<span style="color: #000">请输入金额！</span>',{icon:5});
+					}else{
+                        layer.msg('<span style="color: #000;">初始化成功！</span>', {icon: 1});
+                        setTimeout(function () {
+                            $("#form").submit();
+                        },800);
+					}
+                }
             });
         });
 	</script>
