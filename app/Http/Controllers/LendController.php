@@ -64,7 +64,7 @@ class LendController extends Controller
         $input = Input::except('_token','lender_id');
         $input['his_system_time'] = time();
         $re = Lendlist::create($input);
-        $data = Lendlist::where('his_pid',$input['his_pid'])->get();
+        $data = Lendlist::where('his_pid',$input['his_pid'])->orderBy('his_id','desc')->get();
 
         $input = Input::all();
         $id = Lendform::where('lender_id',$input['lender_id'])->first();

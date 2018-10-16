@@ -31,6 +31,9 @@
 			</div>
 		</section>
 			@endforeach
+		@if(!$data->first())
+			<p style="color: rgb(135,135,135);text-align: center;font-size: 14px;margin-top: 48px;">暂无数据...</p>
+		@endif
 	</body>
 	<script src="{{asset('resources/views/js/jquery-3.3.1.min.js')}}" type="text/javascript" charset="utf-8"></script>
 	<script src="{{asset('resources/views/js/bootstrap.min.js')}}" type="text/javascript" charset="utf-8"></script>
