@@ -20,7 +20,7 @@
 			<div class="container">
 				<div>
 					<h1>输入金额</h1>
-					<form action="" method="post">
+					<form action="" method="post" id="form">
 						{{csrf_field()}}
 						<div class="input-group">
 							<span class="divspan input-group-addon glyphicon glyphicon-jpy"></span>
@@ -29,7 +29,7 @@
 						@foreach($errors->all() as $error)
 							<p style="color: red;margin-top: -14px;margin-bottom: 5px;">{{$error}}</p>
 							@endforeach
-						<input type="submit" class="btn btn-success btn-lg btn-block" value="更改"/>
+						<input type="button" class="btn btn-success btn-lg btn-block" value="更改"/>
 					</form>
 				</div>
 			</div>
@@ -38,4 +38,19 @@
 	<script src="{{asset('resources/views/js/jquery-3.3.1.min.js')}}" type="text/javascript" charset="utf-8"></script>
 	<script src="{{asset('resources/views/js/bootstrap.min.js')}}" type="text/javascript" charset="utf-8"></script>
 	<script src="{{asset('resources/views/js/iconfont.js')}}" type="text/javascript" charset="utf-8"></script>
+	<script src="{{asset('resources/views/layer/layer.js')}}" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$("[type = 'button']").click(function () {
+            layer.confirm('初始化金额将会清空所有数据！是否继续？', {
+                title: ['警告'],
+                btn: ['初始化','关闭'], //按钮
+				skin: "demo-class"
+            }, function(){
+                layer.msg('<span style="color: #000;">初始化成功！</span>', {icon: 1});
+                setTimeout(function () {
+                    $("#form").submit();
+                },800)
+            });
+        });
+	</script>
 </html>

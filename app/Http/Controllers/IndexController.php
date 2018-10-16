@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Model\Lendform;
+use App\Http\Model\Lendlist;
 use App\Http\Model\Lists;
 use App\Http\Model\User;
 use Illuminate\Http\Request;
@@ -38,6 +39,18 @@ class IndexController extends Controller
             if($validator->passes()){
                 $user -> user_money = $input['user_money'];
                 $re = $user -> update();
+                $list = Lists::all();
+                foreach($list as $dv){
+                    $dv -> delete();
+                }
+                $lender_his = Lendlist::all();
+                foreach($lender_his as $dv){
+                    $dv -> delete();
+                }
+                $lendform = Lendform::all();
+                foreach($lendform as $dv){
+                    $dv -> delete();
+                }
                 return redirect('/index');
             }else{
                 return back()->withErrors($validator);
